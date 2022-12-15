@@ -15,7 +15,7 @@ a->n = value;
 a->parent = parent;
 a->left = NULL;
 a->right = NULL;
-if (parent->left != NULL)
+if (parent->right != NULL)
 {
 a->right = parent->right;
 a->right->parent = a;
