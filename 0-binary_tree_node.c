@@ -7,36 +7,13 @@
  *Return: returns a pointer to the new node, or NULL on failure
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
-
 {
 binary_tree_t *a = malloc(sizeof(binary_tree_t));
-if (value == '\0')
+if (value == '\0' || a == NULL)
 return (NULL);
 a->n = value;
-if (parent != NULL && parent->n == value && parent->left != NULL && parent->right != NULL)
-{
-return NULL;
-}
-if (parent == NULL)
-{
-a->left = NULL;
-a->right = NULL;
-a->parent = NULL;
-return (a);
-}
-else
-{
-a->left = NULL;
-a->right = NULL;
 a->parent = parent;
-if (value < parent->n)
-{
-parent->left = a;
-}
-else
-{
-parent->right = a;
-}
+a->left = NULL;
+a->right = NULL;
 return (a);
-}
 }
