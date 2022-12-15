@@ -2,7 +2,9 @@
 size_t binary_tree_helper(const binary_tree_t *tree);
 
 /**
- *
+ *binary_tree_helper - a helper function to binary_tree_size
+ *@tree: a pointer to the root node of the tree to measure the size
+ *Return: returns the siae of a binary tree
  */
 size_t binary_tree_helper(const binary_tree_t *tree)
 {
@@ -17,8 +19,9 @@ return c + a;
 }
 
 /**
- *
- *
+ *binary_tree_size -  function that measures the size of a binary tree
+ *@tree: a pointer to the root node of the tree to measure the size
+ *Return: returns the siae of a binary tree
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
