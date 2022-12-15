@@ -10,6 +10,8 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 {
 binary_tree_t *a = malloc(sizeof(binary_tree_t));
+if (value == '\0')
+return (NULL);
 a->n = value;
 if (parent != NULL && parent->n == value && parent->left != NULL && parent->right != NULL)
 {
@@ -20,7 +22,7 @@ if (parent == NULL)
 a->left = NULL;
 a->right = NULL;
 a->parent = NULL;
-return a;
+return (a);
 }
 else
 {
@@ -35,6 +37,6 @@ else
 {
 parent->right = a;
 }
-return a;
+return (a);
 }
 }
