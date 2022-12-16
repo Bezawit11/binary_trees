@@ -16,7 +16,8 @@ a = node->n;
 node = node->parent;
 if (node->left != NULL && node->right != NULL)
 {
-if (node->left->n == a){
+if (node->left->n == a)
+{
 node = node->right;
 return (node);
 }
